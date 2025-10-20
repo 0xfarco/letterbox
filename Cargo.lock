@@ -1256,6 +1256,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "letterbox"
+version = "0.1.0"
+dependencies = [
+ "actix-web",
+ "chrono",
+ "config",
+ "once_cell",
+ "reqwest",
+ "secrecy",
+ "serde 1.0.228",
+ "sqlx",
+ "tokio",
+ "tracing",
+ "tracing-actix-web",
+ "tracing-bunyan-formatter",
+ "tracing-log 0.2.0",
+ "tracing-subscriber",
+ "uuid",
+]
+
+[[package]]
 name = "lexical-core"
 version = "0.7.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3424,27 +3445,6 @@ dependencies = [
  "quote",
  "syn",
  "synstructure",
-]
-
-[[package]]
-name = "zero2prod"
-version = "0.1.0"
-dependencies = [
- "actix-web",
- "chrono",
- "config",
- "once_cell",
- "reqwest",
- "secrecy",
- "serde 1.0.228",
- "sqlx",
- "tokio",
- "tracing",
- "tracing-actix-web",
- "tracing-bunyan-formatter",
- "tracing-log 0.2.0",
- "tracing-subscriber",
- "uuid",
 ]
 
 [[package]]

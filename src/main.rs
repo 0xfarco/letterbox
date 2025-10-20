@@ -1,13 +1,13 @@
 use secrecy::ExposeSecret;
 use sqlx::postgres::PgPool;
 use std::net::TcpListener;
-use zero2prod::configuration::get_configuration;
-use zero2prod::startup::run;
-use zero2prod::telemetry::{get_subscriber, init_subscriber};
+use letterbox::configuration::get_configuration;
+use letterbox::startup::run;
+use letterbox::telemetry::{get_subscriber, init_subscriber};
 
 #[tokio::main]
 async fn main() -> std::io::Result<()> {
-    let subsciber = get_subscriber("zero2prod".into(), "info".into(), std::io::stdout);
+    let subsciber = get_subscriber("letterbox".into(), "info".into(), std::io::stdout);
     init_subscriber(subsciber);
 
     let configuration = get_configuration().expect("Failed to read configuration.");
