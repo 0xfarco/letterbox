@@ -1,9 +1,9 @@
-use secrecy::ExposeSecret;
-use sqlx::postgres::PgPool;
-use std::net::TcpListener;
 use letterbox::configuration::get_configuration;
 use letterbox::startup::run;
 use letterbox::telemetry::{get_subscriber, init_subscriber};
+use secrecy::ExposeSecret;
+use sqlx::postgres::PgPool;
+use std::net::TcpListener;
 
 #[tokio::main]
 async fn main() -> std::io::Result<()> {

@@ -1,13 +1,11 @@
-//! tests/health_check.rs
-
+use letterbox::configuration::{DatabaseSettings, get_configuration};
+use letterbox::startup::run;
+use letterbox::telemetry::{get_subscriber, init_subscriber};
 use once_cell::sync::Lazy;
 use secrecy::ExposeSecret;
 use sqlx::{Connection, Executor, PgConnection, PgPool};
 use std::net::TcpListener;
 use uuid::Uuid;
-use letterbox::configuration::{DatabaseSettings, get_configuration};
-use letterbox::startup::run;
-use letterbox::telemetry::{get_subscriber, init_subscriber};
 
 static TRACING: Lazy<()> = Lazy::new(|| {
     let default_filter_level = "info".to_string();
